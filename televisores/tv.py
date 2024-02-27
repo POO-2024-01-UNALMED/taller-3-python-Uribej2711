@@ -2,13 +2,13 @@ from .marca import Marca
 from .control import Control
 
 class TV:
-    def __init__(self, marca, estado):
+    def __init__(self, marca=None, estado=False):
         self._marca = marca
         self._estado = estado
         self._canal = 1
         self._volumen = 1
         self._precio = 500
-        self._control = Control()
+        self._control = Control(self)
 
     def get_marca(self):
         return self._marca
